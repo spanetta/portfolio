@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steve Panetta | Creative Director & Strategist</title>
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --bg-color: #0a0a0a;
+            --text-color: #f0f0f0;
+            --accent-color: #007AFF; /* A strong tech blue */
+            --secondary-text: #888;
+            --card-bg: #1a1a1a;
+            --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        a:hover { color: var(--accent-color); }
+        
+        ul { list-style: none; }
+
+        /* --- LAYOUT UTILITIES --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section { padding: 80px 0; border-bottom: 1px solid #222; }
+
+        /* --- HEADER / NAV --- */
+        header {
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { font-weight: 700; font-size: 1.2rem; letter-spacing: -0.5px; }
+
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: var(--secondary-text);
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: var(--text-color);
+            color: var(--bg-color);
+            font-weight: 700;
+            border-radius: 4px;
+        }
+        .btn:hover { background: var(--accent-color); color: white; }
+
+        /* --- PORTFOLIO GRID --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card-image {
+            height: 250px;
+            background-color: #333; /* Placeholder color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+        }
+        
+        .card-content { padding: 25px; }
+        
+        .card-category {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            display: block;
+            font-weight: 700;
+        }
+
+        .card h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        .card p { font-size: 0.95rem; color: var(--secondary-text); }
+
+        /* --- ABOUT / RESUME --- */
+        .resume-layout {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+        }
+
+        .job-item { margin-bottom: 40px; }
+        .job-title { font-size: 1.2rem; font-weight: 700; }
+        .job-company { color: var(--accent-color); margin-bottom: 5px; }
+        .job-date { font-size: 0.9rem; color: var(--secondary-text); margin-bottom: 15px; display: block; }
+
+        /* --- FOOTER --- */
+        footer { padding: 50px 0; text-align: center; color: var(--secondary-text); font-size: 0.9rem; }
+
+        /* --- MOBILE --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.1rem; }
+            .resume-layout { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">STEPHEN PANETTA</div>
+                <ul class="nav-links">
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero container">
+        <h1>Creative Director & <br>Strategic Leader.</h1>
+        <p>Turning creative vision into pipeline influence. 25+ years experience spanning global retail tech and venture-backed startups.</p>
+        <a href="#work" class="btn">View Selected Work</a>
+    </section>
+
+    <section id="work" class="container">
+        <h2 style="font-size: 2rem; margin-bottom: 20px;">Selected Projects</h2>
+        <p style="color: var(--secondary-text);">Focusing on Revenue Impact, Scalability, and Innovation.</p>
+        
+        <div class="grid">
+            <article class="card">
+                <div class="card-image">
+                    [Image Placeholder: NRF/SKO Booth]
+                </div>
+                <div class="card-content">
+                    <span class="card-category">Flagship Events</span>
+                    <h3>The Immersive Experience</h3>
+                    [cite_start]<p>Directed end-to-end creative for major industry events (NRF, SKO, Retail Technology Show), managing booth graphics and digital assets[cite: 3].</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-image">
+                     [Image Placeholder: Brand Guidelines]
+                </div>
+                <div class="card-content">
+                    <span class="card-category">Brand Systems</span>
+                    <h3>Scalable Design Ops</h3>
+                    [cite_start]<p>Played a pivotal role in brand guideline updates and template systems to strengthen global brand consistency[cite: 5].</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-image">
+                     [Image Placeholder: Mobile UI Screens]
+                </div>
+                <div class="card-content">
+                    <span class="card-category">Product Vision</span>
+                    <h3>Appifier Mobile UX</h3>
+                    [cite_start]<p>Owned the UI/UX design of all Appifier mobile products, balancing aesthetics with a business model that drove immediate revenue[cite: 26, 31].</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-image">
+                     [Image Placeholder: AI Generated Concept]
+                </div>
+                <div class="card-content">
+                    <span class="card-category">Innovation Lab</span>
+                    <h3>AI-Enhanced Workflow</h3>
+                    [cite_start]<p>Leveraging Generative AI and emerging platforms to accelerate design quality and speed[cite: 11].</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <div class="resume-layout">
+            <div>
+                <h2 style="font-size: 2rem; margin-bottom: 20px;">About Me</h2>
+                <p style="color: var(--secondary-text); margin-bottom: 20px;">
+                    I am a Senior Art Director with a proven record of elevating brand standards and delivering impactful design solutions. 
+                    <br><br>
+                    [cite_start]Currently, I lead creative at Aptos, where I have been recognized as a top performer (2x President’s Club)[cite: 7]. [cite_start]Previously, I founded Appifier, a venture-backed mobile platform[cite: 21].
+                </p>
+                <p><strong>Core Stack:</strong> Figma, After Effects, Adobe CC, AI Platforms, HTML/CSS.</p>
+            </div>
+            
+            <div class="experience-list">
+                <div class="job-item">
+                    <div class="job-title">Senior Art Director</div>
+                    <div class="job-company">Aptos Retail</div>
+                    [cite_start]<span class="job-date">Apr 2016 - Present [cite: 24]</span>
+                    <p style="font-size: 0.9rem; color: #ccc;">Leading creative strategy, flagship events, and sales enablement for a global tech leader.</p>
+                </div>
+
+                <div class="job-item">
+                    <div class="job-title">Founder / COO / Lead Designer</div>
+                    <div class="job-company">Appifier (Acquired)</div>
+                    [cite_start]<span class="job-date">Aug 2011 - Jul 2014 [cite: 25]</span>
+                    <p style="font-size: 0.9rem; color: #ccc;">Co-founded a venture-backed platform. Led product design and UI/UX strategy.</p>
+                </div>
+
+                <div class="job-item">
+                    <div class="job-title">Founder / Art Director</div>
+                    <div class="job-company">Mosca Media</div>
+                    [cite_start]<span class="job-date">Mar 2005 - Apr 2011 [cite: 33]</span>
+                    <p style="font-size: 0.9rem; color: #ccc;">Managed projects from conception through completion for diverse clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container" style="text-align: center; padding: 100px 0;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Let's Collaborate</h2>
+        <p style="margin-bottom: 40px; color: var(--secondary-text);">Available for Creative Director roles and strategic consulting.</p>
+        <a href="mailto:your-email@example.com" class="btn">Get in Touch</a>
+        <br><br>
+        [cite_start]<a href="https://www.linkedin.com/in/spanetta/" target="_blank" style="color: var(--secondary-text); font-size: 0.9rem;">LinkedIn Profile [cite: 18]</a>
+    </section>
+
+    <footer>
+        <div class="container">
+            &copy; 2025 Stephen Panetta. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
